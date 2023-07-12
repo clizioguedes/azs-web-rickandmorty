@@ -9,8 +9,6 @@ type EpisodesProp = {};
 export function Episodes({}: EpisodesProp) {
   const { data, loading } = useQuery(GET_ALL_EPISODES);
 
-  console.log("data", data, "loading", loading);
-
   if (loading) {
     return <div>Is loading</div>;
   }
@@ -18,7 +16,7 @@ export function Episodes({}: EpisodesProp) {
   return (
     <main>
       {data.episodes.results.map((ep: Episode) => {
-        return <div>{ep.name}</div>;
+        return <div key={ep.id}>{ep.name}</div>;
       })}
     </main>
   );
