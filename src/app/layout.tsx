@@ -1,5 +1,5 @@
 import Providers from "@/app/providers";
-import { Header } from "@/components/structure/headerr";
+import { Header } from "@/components/structure/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
