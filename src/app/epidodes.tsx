@@ -9,6 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 import arrowNext from "@/assets/images/right-next-.svg";
 
 import arrowPrevious from "@/assets/images/left-arrow.svg";
+import { Loading } from "@/components/structure/loading/loading";
 
 export function Episodes() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,11 +36,7 @@ export function Episodes() {
   }, [currentPage]);
 
   if (loading) {
-    return (
-      <div className="absolute right-1/2 bottom-1/2 transform translate-x-1/2 translate-y-1/2 ">
-        <div className="border-t-transparent border-solid animate-spin rounded-full border-blue-400 border-4 h-24 w-24"></div>
-      </div>
-    );
+    <Loading />;
   }
 
   return (
