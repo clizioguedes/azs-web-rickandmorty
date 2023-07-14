@@ -1,5 +1,5 @@
-import WatchedEpisodes from "./watched-episodes";
+import WatchedEpisodes from "@/app/watched-episodes/watched-episodes";
 
-export default function WatchedMovies() {
+export default function Page() {
   return <WatchedEpisodes />;
 }

@@ -5,7 +5,7 @@ import { GET_ALL_EPISODES } from "@/querys/episodes";
 import { useQuery } from "@apollo/client";
 import { useCallback, useState } from "react";
 
-import { ItemList } from "@/components/structure/item-list/item-list";
+import { EpisodeList } from "@/components/contexts/episodes/item-list";
 import { Loading } from "@/components/structure/loading/loading";
 import { Pagination } from "@/components/structure/pagination";
 
@@ -36,7 +36,7 @@ export function Episodes() {
     <main className="container m-auto md:p-8 sm:p-8 p-16">
       <ul role="list" className="divide-y divide-gray-100">
         {data.episodes.results.map((episode: Episode) => (
-          <ItemList key={episode.id} episode={episode} />
+          <EpisodeList key={episode.id} episode={episode} />
         ))}
       </ul>
       <Pagination

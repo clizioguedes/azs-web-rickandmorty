@@ -9,7 +9,7 @@ type ListProps = {
   episode: Episode;
 };
 
-export function ItemList({ episode }: ListProps) {
+export function EpisodeList({ episode }: ListProps) {
   const {
     handleFavoriteEpisode: onFavoriteEpisode,
     handleWatchedEpisode: onWatchedEpisode,
@@ -33,6 +33,11 @@ export function ItemList({ episode }: ListProps) {
     onFavoriteEpisode(
       episode,
       setIsFavoriteEpisode((previous: boolean) => !previous)
+    );
+
+    onWatchedEpisode(
+      episode,
+      setIsWatchedEpisode((previous: boolean) => !previous)
     );
   }
 

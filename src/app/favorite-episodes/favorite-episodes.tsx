@@ -6,20 +6,20 @@ import { EpisodesContext } from "@/contexts/episodes.context";
 import { Episode } from "@/models/Episode";
 import { useContext } from "react";
 
-export default function WatchedEpisodes() {
-  const { watchedEpisodes } = useContext(EpisodesContext);
+export default function FavoriteEpisodes() {
+  const { favoriteEpisodes } = useContext(EpisodesContext);
 
-  if (watchedEpisodes.length < 1) {
-    return <EmptyData title="Não exitem episódios assistidos no momento" />;
+  if (favoriteEpisodes.length < 1) {
+    return <EmptyData title="Não existem episódios favoritos" />;
   }
 
   return (
     <main className="container m-auto md:p-8 sm:p-8 p-16">
       <div className="w-full flex items-center justify-center">
-        <h1 className="font-semibold">Episódios Assistidos</h1>
+        <h1 className="font-semibold">Episódios Favoritos</h1>
       </div>
       <ul role="list" className="divide-y divide-gray-100">
-        {watchedEpisodes.map((episode: Episode) => (
+        {favoriteEpisodes.map((episode: Episode) => (
           <EpisodeList key={episode.id} episode={episode} />
         ))}
       </ul>
