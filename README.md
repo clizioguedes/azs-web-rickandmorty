@@ -11,11 +11,11 @@ Aplicação para gerenciar todos os episódios de _Rick and Morty_. Segue as fun
   - Número do episódio
   - Nome
   - Data que foi ao ar
-- Lista dos personagens do episódio, para cada personaagem mostrar::
-  - Foto
-  - Nome
-  - Espécie
-  - Status
+  - Lista dos personagens do episódio, para cada personaagem mostrar::
+    - Foto
+    - Nome
+    - Espécie
+    - Status
 - Favoritar e desfavoritar um episódio
 - Marcar um episódio como **visto**
 - Listar episódios favoritos
