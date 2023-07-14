@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import Logo from "@/assets/images/rickandmorty_logo.png";
+import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
@@ -16,9 +17,9 @@ export function Header() {
     <header className="bg-gray-100 shadow">
       <div className="container mx-auto py-4 px-8">
         <nav className="flex items-center justify-between flex-wrap">
-          <div className="flex items-center flex-shrink-0 mr-6">
+          <Link href="/" className="flex items-center flex-shrink-0 mr-6">
             <Image width={160} height={40} src={Logo} alt="Logomarca" />
-          </div>
+          </Link>
           <div className="block lg:hidden">
             <button
               onClick={toggleMenu}
@@ -40,18 +41,18 @@ export function Header() {
             } lg:flex lg:items-center lg:w-auto`}
           >
             <div className="text-sm lg:flex-grow">
-              <a
-                href="#"
+              <Link
+                href="/fovorite-episodes"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-800 mr-4"
               >
                 Favoritos
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/watched-episodes"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-800 mr-4"
               >
                 Assistidos
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
