@@ -20,13 +20,19 @@ export function EpisodesProvider({ children }: { children: ReactNode }) {
   const [favoriteEpisodes, setFavoriteEpisodes] = useState<Episode[]>([]);
   const [watchedEpisodes, setWatchedEpisodes] = useState<Episode[]>([]);
 
+  function hasExists(arrayToVerify: Episode[], idToSearch: number) {
+    const hasExistsEpisode = !!arrayToVerify.find(
+      (item) => item.id === idToSearch
+    );
+
+    return hasExistsEpisode;
+  }
+
   function handleFavoriteEpisode(
     ep: Episode,
     callback?: (value: SetStateAction<boolean>) => void
   ) {
-    const hasExistsEpisode = !!favoriteEpisodes.find(
-      (favorite) => favorite.id === ep.id
-    );
+    const hasExistsEpisode = hasExists(favoriteEpisodes, ep.id);
 
     if (callback) callback;
 
@@ -43,13 +49,11 @@ export function EpisodesProvider({ children }: { children: ReactNode }) {
     ep: Episode,
     callback?: (value: SetStateAction<boolean>) => void
   ) {
-    const hasExistsWatchedEpisode = !!watchedEpisodes.find(
-      (watched) => watched.id === ep.id
-    );
+    const hasExistsEpisode = hasExists(watchedEpisodes, ep.id);
 
     if (callback) callback;
 
-    if (hasExistsWatchedEpisode) {
+    if (hasExistsEpisode) {
       return setWatchedEpisodes(
         watchedEpisodes.filter((watched) => watched.id !== ep.id)
       );

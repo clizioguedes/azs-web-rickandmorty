@@ -35,10 +35,7 @@ export function EpisodeList({ episode }: ListProps) {
       setIsFavoriteEpisode((previous: boolean) => !previous)
     );
 
-    onWatchedEpisode(
-      episode,
-      setIsWatchedEpisode((previous: boolean) => !previous)
-    );
+    onWatchedEpisode(episode, setIsWatchedEpisode(true));
   }
 
   function handleWatchedEpisode() {

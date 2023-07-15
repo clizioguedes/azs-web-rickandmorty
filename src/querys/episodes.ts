@@ -22,3 +22,22 @@ export const GET_ALL_EPISODES = gql`
     }
   }
 `;
+
+export const GET_EPISODE_BY_ID = gql`
+  query Episode($id: ID!) {
+    episode(id: $id) {
+      id
+      name
+      air_date
+      episode
+      characters {
+        id
+        name
+        status
+        image
+        species
+      }
+      created
+    }
+  }
+`;
