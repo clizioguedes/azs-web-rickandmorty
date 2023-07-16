@@ -26,7 +26,7 @@ export default function Page() {
   }
 
   return (
-    <main className="container m-auto md:p-8 sm:p-8">
+    <main className="container m-auto md:p-8 sm:p-4">
       <div className="px-4 sm:px-0">
         <h1 className="text-2xl font-semibold leading-7 text-gray-900">
           {data?.episode.name}
@@ -34,8 +34,8 @@ export default function Page() {
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
-          <div className="py-6 sm:grid sm:grid-cols-4 sm:gap-2 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+          <div className="px-4 py-6 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+            <dt className=" text-sm font-medium leading-6 text-gray-900">
               Data de exibição
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -50,7 +50,7 @@ export default function Page() {
               {data.episode.episode}
             </dd>
           </div>
-          <div className="px-2 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0">
+          <div className="px-4 py-6 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
               Personagens do Episódio
             </dt>

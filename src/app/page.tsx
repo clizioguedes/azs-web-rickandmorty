@@ -3,9 +3,5 @@
 import { Episodes } from "@/app/episodes";
 
 export default function Home() {
-  return (
-    <main>
-      <Episodes />
-    </main>
-  );
+  return <Episodes />;
 }

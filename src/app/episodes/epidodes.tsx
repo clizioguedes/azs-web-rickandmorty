@@ -39,7 +39,7 @@ export function Episodes() {
   }
 
   return (
-    <main className="container m-auto md:p-8 sm:p-8 p-16">
+    <main className="container m-auto p-8 lg:p-16">
       <Search onSearch={setSearch} searchValue={search} />
 
       {loading ? (

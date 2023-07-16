@@ -14,7 +14,7 @@ export default function FavoriteEpisodes() {
   }
 
   return (
-    <main className="container m-auto md:p-8 sm:p-8 p-16">
+    <main className="container m-auto p-8 lg:p-16">
       <div className="w-full flex items-center justify-center">
         <h1 className="font-semibold">Episódios Favoritos</h1>
       </div>
