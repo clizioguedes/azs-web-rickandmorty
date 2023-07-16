@@ -7,7 +7,7 @@ type CardCaracterProps = {
 
 export function CardCharacter({ character }: CardCaracterProps) {
   return (
-    <div className="flex items-center justify-start flex-col flex-wrap border-2 border-gray-100 px-2 py-4 w-52">
+    <div className="flex items-center justify-start flex-col flex-wrap border-2 border-gray-100 px-2 py-4 w-44 mx-auto">
       <div className="mb-2">
         <Image
           width={120}

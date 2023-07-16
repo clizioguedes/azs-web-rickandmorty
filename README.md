@@ -1,4 +1,14 @@
-# Rick e Morty API with NextJS e Apollo Client
+# Rick e Morty API Usando NextJS e Apollo Client
+
+## Pré-requisitos
+
+- Nodejs na versão 18 ou superior
+- Yarn
+
+## Para executar o projeto Após clonar o projeto na máquina
+
+- Na pasta raíz do projeto execute o comando`yarn`
+- Depois `yarn dev`
 
 Aplicação para gerenciar todos os episódios de _Rick and Morty_. Segue as funcionalidades que devem ser implementadas
 
@@ -21,7 +31,7 @@ Aplicação para gerenciar todos os episódios de _Rick and Morty_. Segue as fun
 - Listar episódios favoritos
 - Buscar episódio pelo nome
 
-## API de Consumo
+## API
 
-A API para consumo das informações é uma api GraphQL, e pode ser acessada na URL
+A API GraphQL pode ser acessada na URL
 [Rick e Morty GraphQL](https://rickandmortyapi.com/graphql)

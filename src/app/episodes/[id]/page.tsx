@@ -54,7 +54,7 @@ export default function Page() {
             <dt className="text-sm font-medium leading-6 text-gray-900">
               Personagens do Episódio
             </dt>
-            <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0 flex flex-wrap flex-row gap-4">
+            <dd className="mt-2 text-sm text-gray-900 sm:col-span-4  sm:mt-0 flex flex-wrap flex-row gap-4">
               {data.episode.characters.map((character: Character) => {
                 return (
                   <CardCharacter key={character.id} character={character} />

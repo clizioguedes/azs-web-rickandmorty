@@ -14,14 +14,17 @@ export function Header() {
   };
 
   return (
-    <header className="bg-gray-100 shadow">
+    <header className="bg-gray-100 shadow mb-4">
       <div className="container mx-auto py-4 px-8">
         <nav className="flex items-center justify-between flex-wrap">
           <Link href="/" className="flex items-center flex-shrink-0 mr-6">
             <Image width={160} height={40} src={Logo} alt="Logomarca" />
           </Link>
+
           <div className="block lg:hidden">
             <button
+              aria-label="Toggle Menu"
+              aria-expanded={isMenuOpen}
               onClick={toggleMenu}
               className="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800 hover:text-gray-700 hover:border-gray-700"
             >
@@ -35,6 +38,7 @@ export function Header() {
               </svg>
             </button>
           </div>
+
           <div
             className={`w-full ${
               isMenuOpen ? "block" : "hidden"
@@ -47,6 +51,7 @@ export function Header() {
               >
                 Favoritos
               </Link>
+
               <Link
                 href="/watched-episodes"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-800 mr-4"
